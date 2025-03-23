@@ -17,9 +17,14 @@ export default defineNuxtConfig({
         { name: 'description', content: 'A modern e-commerce store built with Nuxt 3' }
       ],
     },
-    // This is important for GitHub Pages
-    baseURL: '/ecommerce-nuxt/',
-    buildAssetsDir: '/ecommerce-nuxt/_nuxt/',
+    // Configure baseURL for GitHub Pages
+    baseURL: '/ecommerce-nuxt/'
+  },
+
+  // Enable static site generation
+  ssr: true,
+  nitro: {
+    preset: 'github-pages'
   },
 
   vite: {
